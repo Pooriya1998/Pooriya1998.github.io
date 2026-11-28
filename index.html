@@ -52,14 +52,23 @@ h2{font-size:28px;margin:0 0 22px;letter-spacing:-.01em}
 .mode{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}
 .mode:hover{border-color:var(--accent);color:var(--accent)}
 .mode:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-footer{:36px 0 48px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+footer{padding:36px 0 48px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.proj .tag{font-family:"Bricolage Grotesque",Arial,sans-serif;font-size:14px;color:var(--accent);margin:0 0 4px}
+.proj h3{margin:0 0 8px;font-size:22px;line-height:1.3}
+.proj p{margin:8px 0;color:var(--muted);font-size:17px}
+.proj .chips{margin:16px 0 20px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.shots figure{margin:0}
+.shots img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
+.shots figcaption{font-family:"Bricolage Grotesque",Arial,sans-serif;font-size:14px;color:var(--muted);margin-top:6px}
 @media(max-width:560px){.row{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.tok{transition:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#path">Experience</a><a href="#contact">Contact</a><button class="mode" id="mode" type="button"></button></nav>
+<nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#path">Experience</a><a href="#contact">Contact</a><button class="mode" id="mode" type="button"></button></nav>
 
 <header class="hero">
   <div class="id">
@@ -85,6 +94,26 @@ footer{:36px 0 48px;color:var(--muted);font-size:15px;border-top:1px solid var(-
   <ul class="chips">
     <li>Python</li><li>PyTorch</li><li>TensorFlow</li><li>Deep learning</li><li>NLP</li><li>Transformers</li><li>Computer vision</li><li>OpenCV</li><li>Pandas</li><li>Matplotlib</li><li>SQL</li><li>Git</li><li>Docker</li>
   </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <article class="proj">
+    <p class="tag">Web application · 2026</p>
+    <h3>Ilia Plan: bilingual company website with a project-controls dashboard</h3>
+    <p>A corporate website for a project management and project controls consultancy, in Persian (right-to-left) and English. The team edits services, articles, portfolio items and site settings from an admin panel, and visitors reach the company through a contact form with spam protection.</p>
+    <p>Its main feature is an interactive sample report: S-curve, manpower, material consumption, financial progress, a Gantt chart and a delay register. All figures come from the database, and indicators such as SPI and CPI are calculated from the weekly data.</p>
+    <p>I defined the requirements and design direction and built it with AI assistance (Claude). It ships with Docker, MariaDB and 22 automated tests.</p>
+    <ul class="chips">
+      <li>Python</li><li>Django</li><li>MariaDB / MySQL</li><li>Docker</li><li>Chart.js</li><li>i18n and RTL</li><li>SEO</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="assets/ilia-plan-home.jpg" width="1280" height="720" loading="lazy" alt="Ilia Plan home page: dark hero section with an S-curve chart, navigation and a consultation button"><figcaption>Home page, English version</figcaption></figure>
+      <figure><img src="assets/ilia-plan-dashboard.jpg" width="1280" height="720" loading="lazy" alt="Ilia Plan sample project-controls dashboard with key indicators and an S-curve of planned versus actual progress"><figcaption>Sample dashboard with demo data</figcaption></figure>
+    </div>
+    <!-- When the site is live, add a link here:
+    <p><a class="btn alt" href="https://YOUR-DOMAIN" rel="noopener">Visit the site</a></p> -->
+  </article>
 </section>
 
 <section id="path">
